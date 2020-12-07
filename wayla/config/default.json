@@ -1,3 +1,4 @@
 {
-    "appName":"Wayla"
+    "appName":"Wayla",
+    "userTypes":["appUser","admin"]
 }

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {db, collection} = require('../services/firebase')
 const createError = require('http-errors');
+const config = require('config');
 
 
 router.post('/', async function(req, res, next) {
@@ -10,7 +11,8 @@ router.post('/', async function(req, res, next) {
   if (user.empty){
     next(createError(400,'Incorrect email or password.'));
   } else {
-    res.send("Hello firebase:  " + user.docs[0].data().Name);
+    //res.send("Hello firebase:  " + user.docs[0].data().Name);
+    res.render('mainPage',{ title: config.get('appName') });
   }
 });
 

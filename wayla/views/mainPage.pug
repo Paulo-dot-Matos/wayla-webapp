@@ -10,6 +10,7 @@ block content
             tr
                 th Brand name
                 th Title
-            tr
-                td Gillete
-                td New comercial for fusion razor 10 blades.
+            each movie in movies
+                tr
+                    td= movie.owner
+                    td= movie.title

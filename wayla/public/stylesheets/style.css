@@ -77,3 +77,31 @@ body {
 .sidenav a:hover {
   color: white;
 }
+
+.mainBody {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.styled-table{
+  width:65%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 5%;
+  
+}
+.styled-table th{
+  background-color: #809BB3;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table td{
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #ddd;
+}

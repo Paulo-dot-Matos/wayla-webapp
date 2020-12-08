@@ -12,7 +12,7 @@ router.post('/', async function(req, res, next) {
     next(createError(400,'Incorrect email or password.'));
   } else {
     //res.send("Hello firebase:  " + user.docs[0].data().Name);
-    res.render('mainPage',{ title: config.get('appName') });
+    res.redirect('/main')
   }
 });
 

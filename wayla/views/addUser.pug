@@ -19,11 +19,16 @@ block content
             br
             input(type="password" id='uPass2' name="password2")
             br
+            label(for='uCompany') Empresa
+            br
+            input(type="text" id='uCompany' name="company")
+            br
             label(for='uType') Tipo de utilizador
             br
             select(id="uType" name="type")
                 option(value="appUser") Utilizador de aplicaçao
                 option(value="bkoUser") Utilizador de backoffice
+                option(value="admin") Utilizador administrador
             br
             input(type="submit" value="Adicionar")
 

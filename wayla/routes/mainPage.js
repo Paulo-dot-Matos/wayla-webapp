@@ -5,7 +5,16 @@ const createError = require('http-errors');
 const config = require('config');
 
 router.get('/', async function(req, res, next) {
-    let movies = await db.collection('movies').get();
+    console.log(req.query.owner)
+    const owner = req.query.owner;
+    let movies;
+    if (typeof(owner) !== 'undefined'){
+        movies = await db.collection('movies').where('owner','==',req.query.owner).get();
+    } else {
+        movies = await db.collection('movies').get();  
+    }
+    
+    //let movies = await db.collection('movies').get();
 
     let map = new Map();
     movies.docs.map(function(doc){

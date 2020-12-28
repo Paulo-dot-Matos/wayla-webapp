@@ -14,6 +14,7 @@ router.post('/', async function(req, res, next) {
       name: req.body.name,
       password: req.body.password,
       type: req.body.type,
+      company: req.body.company,
       createdAt: getTime()
   })
   res.render('success')

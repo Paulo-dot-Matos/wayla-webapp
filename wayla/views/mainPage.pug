@@ -11,9 +11,11 @@ block content
                 th Brand name
                 th Title
                 th
-            each movie in movies
+            each val, key in movies
                 tr
-                    td= movie.owner
-                    td= movie.title
+                    td= val.owner
+                    td= val.title
                     td(align='center')
-                        button(class='openButtton' type='button') Open
+                        form(method='get' action='/video')
+                            input(type='hidden' name='id' value=key)
+                            button(class='openButtton' type='submit') Open

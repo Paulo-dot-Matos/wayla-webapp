@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.sidenav
+        a(href='#') Add video
+        a(href='#') Add user
+        a(href='#') Settings
+    div.mainBody
+        div.video
+            iframe(src=url, frameborder="0" width="645" height="363")
+        div.reviews
+            h2 reviews
+                table.styled-table
+                    tr
+                        th Nome
+                        th Review
+                        th Rate 

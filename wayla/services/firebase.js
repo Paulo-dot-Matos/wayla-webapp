@@ -9,6 +9,9 @@ admin.initializeApp({
 const db = admin.firestore();
 const collection = 'users'
 
-
+function getTime(){
+    return admin.firestore.Timestamp.fromMillis(Date.now());
+}
 exports.db=db;
 exports.collection=collection;
+exports.getTime=getTime;

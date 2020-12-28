@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div.mainBody
+        form(action="/video", method="post")
+            label(for='vOwner') Nome da empresa
+            br
+            input(type="text" id='vOwner' name="owner")
+            br
+            label(for='vTitle') Titulo do video
+            br
+            input(type="text" id="vTitlen" name="title")
+            br
+            label(for='vURL') Url do video
+            br
+            input(type="text" id='vURL' name="url")
+            br
+            input(type="submit" value="Adicionar")    

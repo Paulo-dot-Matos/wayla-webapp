@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {db, collection} = require('../services/firebase')
+const {db, collection, getTime} = require('../services/firebase')
 
 
 router.get('/', async function(req, res, next) {
@@ -16,6 +16,23 @@ router.get('/', async function(req, res, next) {
     });
 
     res.render('video',{ url: movies.data().url,reviews: Object.fromEntries(map)});
+  });
+
+  router.get('/addVideo', function(req, res, next) {
+
+    res.render('addVideo');
+  });
+
+  router.post('/', async function(req, res, next) {
+
+    const video = await db.collection('movies').add({
+        owner: req.body.owner,
+        title: req.body.title,
+        url: req.body.url,
+        active: true,
+        added: getTime()
+    })
+    res.render('success')
   });
   
   module.exports = router;

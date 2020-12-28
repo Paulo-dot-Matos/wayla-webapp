@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    div.mainBody
+        form(action="/users", method="post" autocomplete="off")
+            label(for='uName') Nome
+            br
+            input(type="text" id='uName' name="name")
+            br
+            label(for='uMail') Email
+            br
+            input(type="email" id="uMail" name="email" )
+            br
+            label(for='uPass') Password
+            br
+            input(type="password" id='uPass' name="password")
+            br
+            label(for='uPass2') Confirme a password
+            br
+            input(type="password" id='uPass2' name="password2")
+            br
+            label(for='uType') Tipo de utilizador
+            br
+            select(id="uType" name="type")
+                option(value="appUser") Utilizador de aplicaçao
+                option(value="bkoUser") Utilizador de backoffice
+            br
+            input(type="submit" value="Adicionar")
+
+            

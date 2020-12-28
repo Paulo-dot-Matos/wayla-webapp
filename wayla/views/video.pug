@@ -1,10 +1,6 @@
 extends layout
 
 block content
-    div.sidenav
-        a(href='#') Add video
-        a(href='#') Add user
-        a(href='#') Settings
     div.mainBody
         div.video
             iframe(src=url, frameborder="0" width="645" height="363")
@@ -14,4 +10,9 @@ block content
                     tr
                         th Nome
                         th Review
-                        th Rate 
+                        th Rate
+                    each val, key in reviews
+                        tr
+                            td= val.owner
+                            td= val.comment
+                            td= val.rate

@@ -88,6 +88,8 @@ body {
   margin-left:auto;
   margin-right:auto;
   margin-top: 5%;
+  text-align: center;
+
   
 }
 .styled-table th{
@@ -99,7 +101,7 @@ body {
   color: #FFD6AD;
   border-bottom: 1px solid #ddd;
   font-weight: normal;
-  
+
 }
 
 .styled-table td{
@@ -107,4 +109,15 @@ body {
   font-size: 15px;
   letter-spacing: 0.03em;
   border-bottom: 1px solid #ddd;
+}
+
+.openButtton{
+  border: none;
+  background-color: inherit;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.03em;
 }

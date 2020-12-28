@@ -10,7 +10,10 @@ block content
             tr
                 th Brand name
                 th Title
+                th
             each movie in movies
                 tr
                     td= movie.owner
                     td= movie.title
+                    td(align='center')
+                        button(class='openButtton' type='button') Open

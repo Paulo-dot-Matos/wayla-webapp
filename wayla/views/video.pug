@@ -4,6 +4,7 @@ block content
     div.mainBody
         div.video
             iframe(src=url, frameborder="0" width="645" height="363")
+        - if (typeof(reviews) !== 'undefined'){
         div.reviews
             h2 reviews
                 table.styled-table
@@ -16,3 +17,15 @@ block content
                             td= val.owner
                             td= val.comment
                             td= val.rate
+        -} else {
+        div.reviews
+            h2 reviews
+                table.styled-table
+                    tr
+                        th Nome
+                        th Review
+                        th Rate
+                    tr
+                        td(colspan="3") No reviews
+        -}
+        
